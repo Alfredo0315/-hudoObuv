@@ -1,0 +1,226 @@
+﻿# Следующая команда работает для загрузки при использовании Git для Windows.:
+# curl -LOf http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+#
+# Загрузите этот файл с помощью PowerShell v3 под Windows со следующей командой:
+# Вызов-WebRequest https://gist.githubusercontent.com/kmorcinek/2710267/raw / -OutFile .gitignore
+#
+# или wget:
+# wget --сертификат без проверки http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+
+# Пользовательские файлы
+*.suo
+*.пользователь
+*.sln.docstates
+
+# Результаты сборки
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]в/
+[Oo]bj/
+# папка сборки в настоящее время используется для сценариев сборки, и ее не следует игнорировать
+#сборка/
+
+# Пакеты NuGet
+*.nupkg
+# Папка packages может быть проигнорирована из-за восстановления пакета
+**/пакеты/*
+# за исключением build /, который используется в качестве целевого объекта MSBuild.
+**!/пакеты/сборка/
+# Раскомментируйте при необходимости, однако, как правило, он будет восстановлен при необходимости
+#!**/packages/repositories.config
+
+# Результаты тестирования MSTest
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.scc
+
+# Файлы кэша Visual C++
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+
+# Профилировщик Visual Studio
+*.psess
+*.vsp
+*.vspx
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper — это надстройка для написания кода на .NET
+*_резчеров/
+.*[Rr]e[Ss]харпер
+
+# TeamCity - это надстройка для сборки
+_TeamCity*
+
+# dotCover - инструмент для покрытия кода
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+.*хруст*.local.xml
+
+# Выходная папка Installshield
+[Ee]xpress/
+
+# DocProject - надстройка для генератора документации
+DocProject/buildhelp/
+DocProject/Справка/*.HxT
+DocProject/Справка/*.HxC
+DocProject/Справка/*.hhc
+DocProject/Справка/*.hhk
+DocProject/Справка/*.hhp
+DocProject/Справка/Html2
+DocProject/Help/html
+
+# Каталог Click-Once
+publish/
+
+# Публикация веб-вывода
+*.Publish.xml
+
+# Выходные данные сборки Windows Azure
+csx
+*.build.csdef
+
+# Каталог пакетов приложений для Магазина Windows
+AppPackages/
+
+# Прочее
+*.Cache
+ClientBin/
+[Ss]tyle[Cc]op.*
+~$*
+*~
+*.dbmdl
+.*[Pp]ublish.xml
+*.pfx
+*.publishsettings
+modulesbin/
+tempbin/
+
+# Файл сайта EPiServer (VPP)
+AppData/
+
+# Проекты RIA/Silverlight
+Generated_Code/
+
+# Файлы резервных копий и отчетов о преобразовании старого файла проекта в более новую
+# версию Visual Studio. Файлы резервных копий не нужны, потому что у нас есть git ;-)
+_UpgradeReport_Files/
+*Backup/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# vim
+*.txt~
+*.swp
+*.swo
+
+# Временные файлы при открытии LibreOffice в Ubuntu
+.~lock.*
+ 
+# svn
+.svn
+
+# CVS — система управления версиями
+**/CVS/
+
+# Остатки после разрешения конфликтов в системе управления версиями
+*.orig
+
+# Файлы SQL Server
+**/App_Data/*.mdf
+**/App_Data/*.ldf
+**/App_Data/*.sdf
+
+
+# Сгенерированные файлы LightSwitch
+Созданные произведения/
+_Pvt_Extensions/
+ModelManifest.xml
+
+# =========================
+# Фрагменты Windows
+# =========================
+
+# Кэширование файлов образов Windows
+Thumbs.db
+ehthumbs.db
+
+# Файл конфигурации папки
+Desktop.ini
+
+# Корзина, используемая в общих файловых ресурсах
+$ RECYCLE.BIN/
+
+# Файлы, сгенерированные операционной системой #
+Значок?
+
+# Файлы хранилища служб рабочего стола Mac
+.DS_Store
+
+# Кэш компилятора SASS
+.sass-cache
+
+# Visual Studio 2014 CTP
+**/*.sln.ide
+
+# Visual Studio temp something
+.vs/
+
+# dotnet stuff
+project.lock.json
+
+# VS 2015+
+*.vc.vc.opendb
+*.vc.db
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Папка вывода, используемая Webpack или другими средствами FE
+**/node_modules/*
+**/wwwroot/*
+
+# Специфично для SpecFlow
+*.feature.cs
+*.feature.xlsx.*
+*.Specs_*.html
+
+# Проекты UWP
+AppPackages/
+
+#####
+# Конец основного списка игнорируемых файлов, ниже приведены пользовательские настройки для каждого проекта (шаблоны или пути)
+#####
