@@ -56,6 +56,7 @@ namespace ChudoObuv
                 Session.UserId = user.UserID;
                 Session.UserFio = (user.LastName + " " + user.FirstName + " " + user.Patronymic).Trim();
                 Session.RoleName = user.Role?.Name ?? "";
+                Session.IsGuest = false;
             }
             catch (Exception ex)
             {
@@ -63,6 +64,16 @@ namespace ChudoObuv
                     "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+
+            OpenCatalog();
+        }
+
+        private void Guest_Click(object sender, RoutedEventArgs e)
+        {
+            Session.UserId = 0;
+            Session.UserFio = "Гость";
+            Session.RoleName = "";
+            Session.IsGuest = true;
 
             OpenCatalog();
         }

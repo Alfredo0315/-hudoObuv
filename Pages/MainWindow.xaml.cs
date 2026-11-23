@@ -14,12 +14,31 @@ namespace ChudoObuv
         public MainWindow()
         {
             InitializeComponent();
-            UserFioText.Text = Session.UserFio;
-            OrdersButton.Visibility = Session.CanManageOrders ? Visibility.Visible : Visibility.Collapsed;
+            UserFioText.Text = Session.IsGuest ? "Гость" : Session.UserFio;
+            ApplyRoleRestrictions();
             LoadCategories();
             LoadCatalog();
             _ready = true;
             ApplyFilters();
+        }
+
+        /// <summary>
+        /// Гость только просматривает каталог: корзина, поиск, фильтр
+        /// и сортировка скрыты. Заказы доступны менеджеру и администратору.
+        /// </summary>
+        private void ApplyRoleRestrictions()
+        {
+            Visibility forAuthorized = Session.IsGuest
+                ? Visibility.Collapsed
+                : Visibility.Visible;
+
+            CartButton.Visibility = forAuthorized;
+            SearchBox.Visibility = forAuthorized;
+            CategoryFilter.Visibility = forAuthorized;
+            SortBox.Visibility = forAuthorized;
+            OrdersButton.Visibility = Session.CanManageOrders
+                ? Visibility.Visible
+                : Visibility.Collapsed;
         }
 
         private void LoadCatalog()
@@ -92,7 +111,8 @@ namespace ChudoObuv
 
         private void ProductItem_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            if (((FrameworkElement)sender).DataContext is CatalogItem product)
+            if (!Session.IsGuest
+                && ((FrameworkElement)sender).DataContext is CatalogItem product)
             {
                 new ProductWindow(product) { Owner = this }.ShowDialog();
                 LoadCatalog();

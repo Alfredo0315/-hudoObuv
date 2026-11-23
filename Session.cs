@@ -8,6 +8,7 @@ namespace ChudoObuv
         public static int UserId;
         public static string UserFio = "";
         public static string RoleName = "";
+        public static bool IsGuest;
         public static List<CartItem> Cart = new List<CartItem>();
 
         public static bool IsAdmin => RoleName.Contains("админ", StringComparison.OrdinalIgnoreCase);
@@ -19,6 +20,7 @@ namespace ChudoObuv
             UserId = 0;
             UserFio = "";
             RoleName = "";
+            IsGuest = false;
         }
     }
 

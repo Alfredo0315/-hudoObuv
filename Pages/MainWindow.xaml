@@ -16,7 +16,7 @@
                        VerticalAlignment="Center" FontWeight="Bold" Margin="8,0,0,0"/>
             <Button Content="Выйти" DockPanel.Dock="Right" Click="Logout_Click"
                     Padding="12,2" Margin="8,0,0,0"/>
-            <Button Content="Корзина" DockPanel.Dock="Right" Click="Cart_Click"
+            <Button x:Name="CartButton" Content="Корзина" DockPanel.Dock="Right" Click="Cart_Click"
                     Background="#70B2AF" Foreground="White" Padding="12,2" Margin="8,0,0,0"/>
             <Button x:Name="OrdersButton" Content="Заказы" DockPanel.Dock="Right" Click="Orders_Click"
                     Visibility="Collapsed" Padding="12,2" Margin="8,0,0,0"/>
